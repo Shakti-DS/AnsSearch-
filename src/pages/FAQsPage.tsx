@@ -23,8 +23,8 @@ export default function FAQsPage({ verticalKey }: { verticalKey: string }) {
           currentVerticalLabel="FAQs"
           verticalsConfig={[
             { label: "Locations", verticalKey: "locations" },
-            { label: "Faqs", verticalKey: "faqs" },
             { label: "Menu Item", verticalKey: "menu_items" },
+            { label: "Faqs", verticalKey: "faqs" },
           ]}
         />
         <VerticalResults CardComponent={FaqCard} />

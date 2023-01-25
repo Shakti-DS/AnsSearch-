@@ -14,20 +14,18 @@ export default function Menuitem({ verticalKey }: { verticalKey: string }) {
         const url =
             "https://liveapi-sandbox.yext.com/v2/accounts/me/entities?api_key=aae38614d0701660f74015c1c1fe1587&v=20230110&entityTypes=ce_menuItems";
 
-        const fetchData = async () => {
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-                setApiData(data);
-            } catch (error) {
-                console.log("error", error);
-            }
-        };
+      const fetchData = async () => {
+          try {
+              const response = await fetch(url);
+              const data = await response.json();
+              setApiData(data);
+          } catch (error) {
+              console.log("error", error);
+          }
+      };
 
-        fetchData();
-    }, []);
-
-    console.log("apiData===>", apiData);
+      fetchData();
+  }, [apiData]);
 
     return (
         <>

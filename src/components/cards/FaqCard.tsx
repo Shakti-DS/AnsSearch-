@@ -77,6 +77,8 @@ export function FaqCard(props: TrainerCardProps): JSX.Element {
   const trainerImg = trainer.primaryPhoto?.image?.url ?? "";
   // const smallestThumbnail = trainer.logo?.image?.thumbnails[trainer.logo?.image?.thumbnails.length - 1].url
 
+  // console.log("trainer", trainer);
+
   const screenSize = useContext(ResponsiveContext);
 
   const cssClasses = useComposedCssClasses(builtInCssClasses);
@@ -107,7 +109,9 @@ export function FaqCard(props: TrainerCardProps): JSX.Element {
     //     </AccordionItemPanel>
     //   </AccordionItem>
     // </Accordion>
-    <Accordian que={renderName(trainer.name)}
-      answer={renderName(trainer.name)}/>
+    <Accordian
+      que={renderName(trainer?.name)}
+      answer={renderName(trainer?.answer)}
+    />
   );
 }
